@@ -4,7 +4,7 @@
 if [ ! -f ~/.bash_profile ]; then
     touch ~/.bash_profile
 fi
-
+# Make sure there are double quotes
 # Check if the alias is already present, if not, add it
 if ! grep -q "alias tf="terraform"" ~/.bash_profile; then
     echo "alias tf"terraform"" >> ~/.bash_profile
