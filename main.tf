@@ -1,5 +1,13 @@
 
 terraform {
+ cloud {
+    organization = "Tafadzwa"
+
+    workspaces {
+      name = "Thaniel"
+    }
+  }
+
   required_providers {
     random = {
         source = "hashicorp/random"
@@ -12,7 +20,6 @@ terraform {
     }
   }
 }
-
 
 
 resource "random_string" "bucket_name" {
