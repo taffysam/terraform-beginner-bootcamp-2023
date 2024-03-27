@@ -87,3 +87,9 @@ document which terraform variables take precedence
 ## Confugiration Drift
 
 
+## Considerations when using ChaGT 
+- LLMs such as ChatGPT may not have the latest information about Terraform. May give older deprecated examples.
+
+
+## Working with Files in Terraform
+
