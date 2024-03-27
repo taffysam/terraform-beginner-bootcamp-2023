@@ -55,5 +55,14 @@ variable "error_html_path" {
   default = "error.html" # Path to your index.html file
 }
 
+variable "content_version" {
+  description = "Content version number"
+  type        = number
+
+  validation {
+    condition     = var.content_version > 0 && can(regex("^[1-9]\\d*$", var.content_version))
+    error_message = "Content version must be a positive integer starting from 1."
+  }
+}
 
 
