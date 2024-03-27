@@ -21,5 +21,26 @@ variable "bucket_name" {
 }
 
 
+variable "index_html_filepath" {
+  type        = string
+  description = "File path to the index.html file"
+  
+  validation {
+    condition     = can(fileexists(var.index_html_filepath))
+    error_message = "The specified index.html file does not exist."
+  }
+}
+
+
+variable "error_html_filepath" {
+  type        = string
+  description = "File path to the error.html file"
+  
+  validation {
+    condition     = can(fileexists(var.error_html_filepath))
+    error_message = "The specified error.html file does not exist."
+  }
+}
+
 
 

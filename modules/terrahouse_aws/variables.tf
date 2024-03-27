@@ -10,6 +10,29 @@ variable "user_uuid" {
 }
 
 
+variable "index_html_filepath" {
+  type        = string
+  description = "File path to the index.html file"
+  
+  validation {
+    condition     = can(fileexists(var.index_html_filepath))
+    error_message = "The specified index.html file does not exist."
+  }
+}
+
+
+variable "error_html_filepath" {
+  type        = string
+  description = "File path to the error.html file"
+  
+  validation {
+    condition     = can(fileexists(var.error_html_filepath))
+    error_message = "The specified error.html file does not exist."
+  }
+}
+
+
+
 variable "bucket_name" {
   type        = string
   description = "Name of the AWS S3 bucket"
@@ -20,6 +43,17 @@ variable "bucket_name" {
   }
 }
 
+
+variable "index_html_path" {
+  type    = string
+  default = "index.html" # Path to your index.html file
+}
+
+
+variable "error_html_path" {
+  type    = string
+  default = "error.html" # Path to your index.html file
+}
 
 
 
