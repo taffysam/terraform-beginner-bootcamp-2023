@@ -82,3 +82,14 @@ resource "terraform_data" "content_version" {
   input = var.content_version
   
 }
+
+resource "aws_s3_object" "upload_assets" {
+  for_each = fileset("${path.root}/public/assets", "*.{jpg,png,gif}")
+  bucket = aws_s3_bucket.website_bucket.bucket
+  key    = "assets/${each.key}"
+  source = "${path.root}/public/assets/${each.key}"
+  #content_type = "text/html"
+
+  etag = filemd5("${path.root}/public/assets/${each.key}")
+  
+}
