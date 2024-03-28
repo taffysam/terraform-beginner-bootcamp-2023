@@ -2,4 +2,4 @@ user_uuid="87e8fc20-5f21-4b38-872b-ab8adfb49ed5"
 bucket_name="wyorraraxavqrg5k"
 error_html_filepath ="/workspace/terraform-beginner-bootcamp-2023/modules/terrahouse_aws/public/error.html"
 index_html_filepath ="/workspace/terraform-beginner-bootcamp-2023/modules/terrahouse_aws/public/index.html"
-content_version=1
+content_version=2
