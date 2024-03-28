@@ -3,3 +3,5 @@ bucket_name="wyorraraxavqrg5k"
 error_html_filepath ="/workspace/terraform-beginner-bootcamp-2023/modules/terrahouse_aws/public/error.html"
 index_html_filepath ="/workspace/terraform-beginner-bootcamp-2023/modules/terrahouse_aws/public/index.html"
 content_version=5
+
+
